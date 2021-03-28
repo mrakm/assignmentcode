@@ -42,7 +42,12 @@ function PhoneBookForm(props) {
 
 
   return (
-    <form onSubmit={e => { e.preventDefault(); props.handelOnsubmit(e); }} style={style.form.container}>
+    <form onSubmit={e => { e.preventDefault(); props.handelOnsubmit(e);  
+       e.target.userFirstname.value="";
+       e.target.userLastname.value="";
+       e.target.userPhone.value="";
+       
+       }} style={style.form.container}>
       <label>First name:</label>
       <br />
       <input 
@@ -50,6 +55,7 @@ function PhoneBookForm(props) {
         className='userFirstname'
         name='userFirstname' 
         type='text'
+        required 
         
       />
       <br/>
@@ -60,6 +66,7 @@ function PhoneBookForm(props) {
         className='userLastname'
         name='userLastname' 
         type='text' 
+        required 
       />
       <br />
       <label>Phone:</label>
@@ -69,6 +76,7 @@ function PhoneBookForm(props) {
         className='userPhone' 
         name='userPhone' 
         type='text'
+        required 
       />
       <br/>
       <input 
@@ -82,7 +90,12 @@ function PhoneBookForm(props) {
 }
 
 function InformationTable(props) {
-  const listtorender= props.listphone.map(
+  const listtorender= props.listphone.sort(function(a,b){
+    if(a.lastname.toLowerCase() < b.lastname.toLowerCase()) return -1;
+    if(a.lastname.toLowerCase() > b.lastname.toLowerCase()) return 1;
+    return 0;
+
+  }).map(
     (phone,index)=>
         <tr key={index}>
           <th style={style.tableCell}>{phone.firstname}</th>
@@ -117,6 +130,8 @@ function Application(props) {
        phonenumber:phonenumber
 
      }]);
+       
+    
     
   }
   return (
