@@ -15,3 +15,15 @@ Phone = 8885559999
 You are free to add classes and styles, but make sure you leave the element ID's as they are. Submit your code once it is complete and our system will validate your output.
 Browse Resources
 Search for any help or documentation you might need for this problem. For example: array indexing, Ruby hash tables, etc.
+
+# React List
+
+easy
+
+Time left: Unlimited time
+React List
+We provided some simple React template code. Your goal is to display an unordered list (UL) with list items (LI) within it. The content of each list item should contain two spans (SPAN), one with the name and the other with the age passed in to the DataList function. The span elements should be separated by a single space.
+
+Submit your code once it is complete and our system will validate your output.
+Browse Resources
+Search for any help or documentation you might need for this problem. For example: array indexing, Ruby hash tables, etc.
