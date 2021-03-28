@@ -55,6 +55,7 @@ function PhoneBookForm(props) {
         className='userFirstname'
         name='userFirstname' 
         type='text'
+        defaultValue="Coder"
         required 
         
       />
@@ -65,7 +66,8 @@ function PhoneBookForm(props) {
         style={style.form.inputs}
         className='userLastname'
         name='userLastname' 
-        type='text' 
+        type='text'
+         defaultValue="Byte" 
         required 
       />
       <br />
@@ -76,6 +78,7 @@ function PhoneBookForm(props) {
         className='userPhone' 
         name='userPhone' 
         type='text'
+         defaultValue="8885559999"
         required 
       />
       <br/>
